@@ -1,5 +1,5 @@
 /* Java implementation to convert infix expression to postfix*/
-
+//*Author: Raymond Wilson
 
 import java.util.Stack; 
 
@@ -44,7 +44,7 @@ class Yoda
 		{ 
 			char c = exp.charAt(i); 
 			
-			// If the scanned character is an operand, add it to output. 
+			// If the scanned character is an operand or a ., add it to output. 
 			if (c == '.' || Character.isLetterOrDigit(c) )
 				var += c;
 
@@ -97,7 +97,7 @@ class Yoda
 	
 		// pop all the operators from the stack 
 		if(var != ""){
-			result += var + "#"; 
+			result += var + "#"; //seperator
 			var ="";
 		}
 		while (!stack.isEmpty()){ 
